@@ -1,0 +1,420 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+body{
+    font-family: 'Pretendard';
+    background: #fafafa;
+    color: #121212;
+}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+button{background: none; border: none; cursor: pointer;}
+section{overflow: hidden; padding: 100px 140px;}
+.num{font-feature-settings: 'ss01' on;}
+
+/* 표지영역 */
+#cover{
+    width: 100%;
+    height: 100vh;
+    background: #c14f51;
+    position: relative;
+}
+#cover .main_tit{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+#cover .sub_tit{
+    width: 248px;
+    position: absolute;
+    left: 322px;
+    top: 90px;
+}
+#cover .sub_tit p{
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 100;
+    line-height: 42px;
+}
+#cover .sub_tit .uxui_img{
+    width: 100%;
+    margin-top: 20px;
+}
+#cover .sub_tit .uxui_img img{
+    width: 100%;
+}
+#cover .under_txt_wrap{
+    width: 100%;
+    padding: 0 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+}
+#cover .under_txt_wrap .field{
+    text-align: right;
+}
+#cover .under_txt_wrap ul li{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+}
+#cover .line_cover{
+    width: 1598px;
+    height: 1px;
+    position: absolute;
+    right: 0;
+    top: 350px;
+    background: #121212;
+}
+/* 표지영역 */
+
+/* 프로필영역 */
+#profile{
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    position: relative;
+}
+#profile .profile_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#profile .profile_wrap .profile_card{
+    width: 580px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.profile_card .profile_img{
+    width: 280px;
+    height: 280px;
+    background: #121212;
+    border-radius: 100%;
+}
+.profile_card .info .name{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.profile_card .info .name h3{
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.profile_card .info .name p{
+    font-weight: 300;
+}
+.profile_card .info ul.etc{
+    width: 270px;
+}
+.profile_card .info ul.etc li{
+    font-size: 26px;
+    font-weight: 100;
+    line-height: 36px;
+}
+.stat_wrap{
+    width: 890px;
+    position: relative;
+}
+.stat_wrap::before{
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #c14f51;
+    position: absolute;
+    left: -100px;
+    top: 0;
+}
+.stat_wrap h4{
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.stat_wrap .experience ul.experience_list{
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.stat_wrap .experience ul.experience_list.last{
+    margin-bottom: 110px;
+}
+.stat_wrap .experience ul.experience_list li{
+    font-size: 24px;
+    font-weight: 400;
+}
+.stat_wrap .experience ul.experience_list li:first-child{
+    width: 200px;
+    font-weight: 100;
+}
+
+.stat_wrap .wrap_sec{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.stat_wrap .wrap_sec .license{
+    width: 611px;
+}
+.stat_wrap .wrap_sec .license .license_list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.stat_wrap .wrap_sec .license .license_list li{
+    width: 376px;
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+.stat_wrap .wrap_sec .license .license_list li:nth-child(2n){
+    width: 175px;
+}
+
+.stat_wrap .wrap_sec .edu .edu_list li{
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.skill{
+    width: 100%;
+    padding: 0 140px 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.skill h4{
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.skill ul.skill_list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skill ul.skill_list li{
+    text-align: center;
+}
+.skill ul.skill_list li h5{
+    color: #666;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+/* 프로필영역끝 */
+
+/* 인덱스영역 */
+#index{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#index .tit{}
+#index .tit .index_img{
+    position: relative;
+    margin-bottom: 80px;
+}
+#index .tit .index_img::after{
+    content: "";
+    width: calc( 100% + 140px );
+    height: 2px;
+    background: #c14f51;
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+}
+#index .tit ul.field{
+    text-align: right;
+}
+#index .tit ul.field li{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+}
+#index .gallery{
+    width: 900px;
+    height: 700px;
+    position: relative;
+}
+#index .gallery>div{
+    width: 440px;
+    background: #121212;
+    border-radius: 28px;
+}
+#index .gallery .rwd{
+    height: 440px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#index .gallery .wd{
+    height: 240px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#index .gallery .frontend{
+    height: 240px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#index .gallery .publish{
+    height: 440px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#index .gallery>div>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#index .gallery>div>a>.hover_txt h2{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 34px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+/* 인덱스영역끝 */
+
+/* 작업물영역 */
+.work_wrap{
+    position: relative;
+    overflow: hidden;
+}
+
+/* 헤더 */
+header{
+    width: 100%;
+    height: 100px;
+    padding: 0 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+header.on{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+header ul.nav{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+header ul.nav li:nth-child(1){
+    width: 210px;
+}
+header ul.nav li:nth-child(2){
+    width: 170px;
+}
+header ul.nav li:nth-child(3){
+    width: 250px;
+}
+header ul.nav li:nth-child(4){
+    width: 140px;
+}
+header ul.nav li{
+    position: relative;
+}
+header ul.nav li:hover::before{
+    content: "";
+    width: 4px;
+    height: 18px;
+    background: #121212;
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header ul.nav li a{
+    display: block;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: right;
+}
+header ul.nav li:hover a{
+    font-weight: 800;
+}
+/* 헤더 끝 */
+
+#rwd,
+#publish_m{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+#rwd .mockup_img,
+#publish_m .mockup_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#rwd .mockup_img img,
+#publish_m .mockup_img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+#rwd .txtbox,
+#publish_m .txtbox{
+    position: absolute;
+    left: 140px;
+    bottom: 100px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#rwd .txtbox h2,
+#publish_m .txtbox h2{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+#rwd .txtbox ul.info,
+#publish_m .txtbox ul.info{
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#rwd .txtbox ul.info2,
+#publish_m .txtbox ul.info2{
+    margin: 10px 0;
+}
+#rwd .txtbox ul.info li,
+#publish_m .txtbox ul.info li{
+    font-size: 18px;
+    font-weight: 400;
+}
