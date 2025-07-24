@@ -19,30 +19,38 @@ section{overflow: hidden; padding: 100px 140px;}
     background: #c14f51;
     position: relative;
 }
+#cover .main_tit::after{
+    content: "";
+    width: 1920px;
+    height: 1px;
+    position: absolute;
+    left: -290px;
+    bottom: -20px;
+    background: #121212;
+}
 #cover .main_tit{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 100px;
 }
-#cover .sub_tit{
-    width: 248px;
+#cover .main_tit .sub_tit{
     position: absolute;
-    left: 322px;
-    top: 90px;
+    left: -290px;
+    top: 0;
 }
-#cover .sub_tit p{
+#cover .main_tit .sub_tit p{
     width: 100%;
     text-align: center;
     font-size: 36px;
     font-weight: 100;
     line-height: 42px;
 }
-#cover .sub_tit .uxui_img{
+#cover .main_tit .sub_tit .uxui_img{
     width: 100%;
     margin-top: 20px;
 }
-#cover .sub_tit .uxui_img img{
+#cover .main_tit .sub_tit .uxui_img img{
     width: 100%;
 }
 #cover .under_txt_wrap{
@@ -63,21 +71,12 @@ section{overflow: hidden; padding: 100px 140px;}
     font-weight: 300;
     line-height: 36px;
 }
-#cover .line_cover{
-    width: 1598px;
-    height: 1px;
-    position: absolute;
-    right: 0;
-    top: 350px;
-    background: #121212;
-}
 /* 표지영역 */
 
 /* 프로필영역 */
 #profile{
     width: 100%;
     height: 100vh;
-    background: #fff;
     position: relative;
 }
 #profile .profile_wrap{
@@ -86,8 +85,7 @@ section{overflow: hidden; padding: 100px 140px;}
     justify-content: space-between;
     align-items: center;
 }
-#profile .profile_wrap .profile_card{
-    width: 580px;
+.profile_card{
     display: flex;
     gap: 30px;
     align-items: center;
@@ -109,26 +107,20 @@ section{overflow: hidden; padding: 100px 140px;}
 .profile_card .info .name p{
     font-weight: 300;
 }
-.profile_card .info ul.etc{
-    width: 270px;
-}
 .profile_card .info ul.etc li{
     font-size: 26px;
     font-weight: 100;
     line-height: 36px;
 }
-.stat_wrap{
-    width: 890px;
-    position: relative;
-}
-.stat_wrap::before{
-    content: "";
+.line_profile{
     width: 2px;
-    height: 100%;
+    height: 440px;
     background: #c14f51;
-    position: absolute;
-    left: -100px;
-    top: 0;
+}
+.stat_wrap{
+    min-width: 890px;
+    min-width: 60%;
+    position: relative;
 }
 .stat_wrap h4{
     font-size: 28px;
@@ -217,11 +209,11 @@ section{overflow: hidden; padding: 100px 140px;}
 #index{
     width: 100%;
     height: 100vh;
+    background: #fff;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
-#index .tit{}
 #index .tit .index_img{
     position: relative;
     margin-bottom: 80px;
@@ -244,35 +236,35 @@ section{overflow: hidden; padding: 100px 140px;}
     line-height: 36px;
 }
 #index .gallery{
-    width: 900px;
-    height: 700px;
+    width: 58%;
+    height: 100%;
     position: relative;
 }
 #index .gallery>div{
-    width: 440px;
+    width: 49%;
     background: #121212;
     border-radius: 28px;
 }
 #index .gallery .rwd{
-    height: 440px;
+    height: 68%;
     position: absolute;
     left: 0;
     top: 0;
 }
 #index .gallery .wd{
-    height: 240px;
+    height: 30%;
     position: absolute;
     left: 0;
     bottom: 0;
 }
 #index .gallery .frontend{
-    height: 240px;
+    height: 30%;
     position: absolute;
     right: 0;
     top: 0;
 }
 #index .gallery .publish{
-    height: 440px;
+    height: 68%;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -328,16 +320,16 @@ header ul.nav{
     align-items: center;
 }
 header ul.nav li:nth-child(1){
-    width: 210px;
+    width: 207px;
 }
 header ul.nav li:nth-child(2){
     width: 170px;
 }
 header ul.nav li:nth-child(3){
-    width: 250px;
+    width: 247px;
 }
 header ul.nav li:nth-child(4){
-    width: 140px;
+    width: 132px;
 }
 header ul.nav li{
     position: relative;
