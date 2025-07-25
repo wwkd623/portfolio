@@ -130,7 +130,7 @@ section{overflow: hidden; padding: 100px 140px;}
 }
 .stat_wrap{
     min-width: 890px;
-    min-width: 60%;
+    min-width: 55%;
     position: relative;
 }
 .stat_wrap h4{
@@ -157,35 +157,24 @@ section{overflow: hidden; padding: 100px 140px;}
     font-weight: 100;
 }
 
-.stat_wrap .wrap_sec{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.stat_wrap .license{
+    width: 700px;
 }
-.stat_wrap .wrap_sec .license{
-    width: 611px;
-}
-.stat_wrap .wrap_sec .license .license_list{
+.stat_wrap .license .license_list{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.stat_wrap .wrap_sec .license .license_list li{
+.stat_wrap .license .license_list li{
     width: 376px;
     font-size: 24px;
     font-weight: 100;
-    margin-bottom: 20px;
+    margin: 0 50px 20px 0;
 }
-.stat_wrap .wrap_sec .license .license_list li:nth-child(2n){
+.stat_wrap .license .license_list li:nth-child(2n){
     width: 175px;
-}
-
-.stat_wrap .wrap_sec .edu .edu_list li{
-    font-size: 24px;
-    font-weight: 100;
-    margin-bottom: 20px;
+    margin-right: 0;
 }
 
 .skill{
@@ -319,25 +308,25 @@ section{overflow: hidden; padding: 100px 140px;}
     margin-bottom: 10px;
 }
 #index .gallery .rwd{
-    height: 68%;
+    height: 60%;
     position: absolute;
     left: 0;
     top: 0;
 }
 #index .gallery .wd{
-    height: 30%;
+    height: 38%;
     position: absolute;
     left: 0;
     bottom: 0;
 }
 #index .gallery .frontend{
-    height: 30%;
+    height: 38%;
     position: absolute;
     right: 0;
     top: 0;
 }
 #index .gallery .publish{
-    height: 68%;
+    height: 60%;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -439,14 +428,14 @@ header ul.nav li:hover a{
     position: absolute;
     left: 0;
     bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
 }
 .works .txtbox{
     position: absolute;
     left: 140px;
     bottom: 100px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #000;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
 }
 .works .txtbox h2{
     font-size: 40px;
@@ -454,7 +443,7 @@ header ul.nav li:hover a{
     margin-bottom: 30px;
 }
 .works .txtbox ul.info{
-    width: 450px;
+    width: 420px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -465,4 +454,5 @@ header ul.nav li:hover a{
 .works .txtbox ul.info li{
     font-size: 18px;
     font-weight: 400;
+    text-align: right;
 }

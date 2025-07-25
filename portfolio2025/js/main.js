@@ -31,5 +31,20 @@ $(function(){
 
       prevScroll = currentScroll <= 0 ? 0 : currentScroll;
     });
+
+    gsap.utils.toArray(".sec").forEach((section, i) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "0% 0%",
+        // 상단고정
+        pin: true,
+        pinSpacing: true,
+      });
+    });
+    // 스냅처리(특정 영역에 달라붙는 효과)
+    ScrollTrigger.create({
+      snap: 1 / (section.length - 1),
+    });
 })
+
 
