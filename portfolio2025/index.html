@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio by 심현지</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <button id="toTop">TOP</button> 
+
     <!-- 표지영역 -->
     <section id="cover" class="sec">
         <h2 class="sr-only">Cover Section</h2>
@@ -29,8 +32,8 @@
             </ul>
             <ul class="field">
                 <li>반응형 디자인</li>
-                <li>웹 퍼블리싱 PC / Mobile </li>
-                <li>프론트엔드 개발</li>
+                <li>웹 퍼블리싱 PC</li>
+                <li>웹 퍼블리싱 Mobile</li>
                 <li>웹 디자인</li>
             </ul>
         </div>
@@ -42,14 +45,17 @@
         <h2 class="sr-only">Profile Section</h2>
         <div class="profile_wrap">
             <div class="profile_card">
-                <div class="profile_img"></div>
+                <div class="profile_img">
+                    <!-- 프로필사진 -->
+                    <img src="./images/KakaoTalk_Photo_2025-09-24-02-17-18 002.jpeg" alt="">
+                </div>
                 <div class="info">
                     <div class="name">
                         <h3>SHIM HYEONJI</h3>
-                        <p>심현지</p>
+                        <p>심현지 <span class="num">1995</span></p>
                     </div>
                     <ul class="etc">
-                        <li class="num">1995.06.23</li>
+                        <li class="num">경기도 김포시 거주</li>
                         <li class="num">010-4712-6773</li>
                         <li class="num">wwkd623@naver.com</li>
                     </ul>
@@ -61,19 +67,19 @@
                     <h4>경력</h4>
                     <ul class="experience_list">
                         <li class="num">2023.04 ~ 2025.01</li>
-                        <li>여성복 쇼핑몰 (주)빈스홀릭 웹디자인 담당</li>
+                        <li>여성복 쇼핑몰 (주)빈스홀릭 웹디자인 전담</li>
                     </ul>
                     <ul class="experience_list last">
                         <li class="num">2019.10 ~ 2022.09</li>
-                        <li>아동복 쇼핑몰 (주)제이드스튜디오스 베리클로젯  웹디자인 팀장</li>
+                        <li>아동복 쇼핑몰 (주)제이드스튜디오스 웹디자인 팀장</li>
                     </ul>
                 </div>
                 <div class="license">
                     <h4>자격증</h4>
                     <ul class="license_list">
-                        <li>웹디자인기능사 필기 합격/실기 예정</li>
+                        <li>웹디자인개발기능사</li>
                         <li>GTQ 포토샵 1급</li>
-                        <li>컴퓨터그래픽기능사 필기 합격/실기 예정</li>
+                        <li>컴퓨터그래픽기능사</li>
                         <li>GTQi 일러스트 1급</li>
                         <li>운전면허 2종 보통</li>
                     </ul>
@@ -83,10 +89,6 @@
         <div class="skill">
             <h4>사용가능 프로그램</h4>
             <ul class="skill_list">
-                <li>
-                    <img src="./images/95.png" alt="95%그래프">
-                    <h5>VSCode</h5>
-                </li>
                 <li>
                     <img src="./images/95.png" alt="95%그래프">
                     <h5>HTML5</h5>
@@ -116,8 +118,12 @@
                     <h5>Photoshop</h5>
                 </li>
                 <li>
-                    <img src="./images/85.png" alt="85%그래프">
+                    <img src="./images/90.png" alt="90%그래프">
                     <h5>Illustrator</h5>
+                </li>
+                <li>
+                    <img src="./images/80.png" alt="80%그래프">
+                    <h5>Premiere Pro</h5>
                 </li>
             </ul>
         </div>
@@ -133,45 +139,45 @@
             </div>
             <ul class="field">
                 <li>반응형 디자인</li>
-                <li>웹 퍼블리싱 PC / Mobile </li>
-                <li>프론트엔드 개발</li>
+                <li>웹 퍼블리싱 PC</li>
+                <li>웹 퍼블리싱 Mobile</li>
                 <li>웹 디자인</li>
             </ul>
         </div>
         <div class="gallery">
             <div class="rwd">
-                <a href="#rwd">
-                    <!-- <img src="" alt="반응형목업"> -->
+                <a href="#rwd1">
+                    <img src="./images/mockup_rwd_intro.jpg" alt="반응형목업">
                     <!-- hover -->
                     <div class="hover_txt">
                         <h2>Responsive Design</h2>
                     </div>
                 </a>
             </div>
+            <div class="publishPC">
+                <a href="#pc1">
+                    <img src="./images/mockup_snuh_intro.jpg" alt="퍼블리싱 목업pc">
+                    <!-- hover -->
+                    <div class="hover_txt">
+                        <h2>Publishing PC</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="publishM">
+                <a href="#m2">
+                    <img src="./images/mockup_subway_intro.jpg" alt="퍼블리싱 목업m">
+                    <!-- hover -->
+                    <div class="hover_txt">
+                        <h2>Publishing<br>Mobile</h2>
+                    </div>
+                </a>
+            </div>
             <div class="wd">
-                <a href="#webdesign">
-                    <!-- <img src="" alt="웹디자인목업"> -->
+                <a href="#wd">
+                    <img src="./images/mockup_wd_intro.jpg" alt="웹디자인목업">
                     <!-- hover -->
                     <div class="hover_txt">
                         <h2>Web Design</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="frontend">
-                <a href="#">
-                    <!-- <img src="" alt="프론트엔드개발목업"> -->
-                    <!-- hover -->
-                    <div class="hover_txt">
-                        <h2>Frontend<br>Development</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="publish">
-                <a href="#publish_m">
-                    <!-- <img src="" alt="퍼블리싱 목업"> -->
-                    <!-- hover -->
-                    <div class="hover_txt">
-                        <h2>Web Publishing</h2>
                     </div>
                 </a>
             </div>
@@ -183,155 +189,446 @@
     <div class="work_wrap">
         <header>
             <div class="index_hd_img">
-                <img src="./images/index_logo.png" alt="인덱스">
+                <a href="#index">
+                    <img src="./images/index_logo.png" alt="인덱스">
+                </a>
             </div>
             <ul class="nav">
                 <li>
-                    <a href="#rwd">Responsive Design</a>
+                    <a href="#rwd1">Responsive Design</a>
                 </li>
                 <li>
-                    <a href="#publish_m">Web Publishing</a>
+                    <a href="#pc1">Publishing PC</a>
                 </li>
                 <li>
-                    <a href="#">Frontend Development</a>
+                    <a href="#m2">Publishing M</a>
                 </li>
                 <li>
-                    <a href="#webdesign">Web Design</a>
+                    <a href="#wd">Web Design</a>
                 </li>
             </ul>
         </header>
-        <section id="rwd" class="works sec">
+
+        <section id="rwd1" class="works works_left sec">
             <h2 class="sr-only">Work Section</h2>
             <div class="mockup_img">
-                <!-- <img src="" alt=""> -->
+                <img src="./images/mockup_rwd.jpg" alt="반응형엽떡">
             </div>
-            <!-- 텍스트박스 아래 깔아줄 그라디언트 그림자 -->
-            <div class="txtshadow"></div>
             <div class="txtbox">
-                <h2>반응형 디자인 - 라푸마</h2>
+                <h2><span>반응형 클론 디자인</span><br>동대문엽기떡볶이</h2>
+                <ul class="info">
+                    <li>작업기간</li>
+                    <li>3 days</li>
+                </ul>
+                <ul class="info info2">
+                    <li>작업영역</li>
+                    <li>
+                        PC - 메인페이지<br>
+                        M - 메인페이지, 사이드바
+                    </li>
+                </ul>
+                <ul class="info">
+                    <li>작업프로그램</li>
+                    <li>html5, css, javascript, jquery, slick</li>
+                </ul>
+            </div>
+        </section>
+        <section id="rwd1-1" class="worksrwd sec">
+            <h2 class="sr-only">Work Section</h2>
+            <div class="device_mockup">
+                <div class="mockup_pc">
+                    <img src="./images/imac.png" alt="pc디바이스목업">
+                    <div class="img_pc">
+                        <a href="https://wwkd623.github.io/project/RWD/yupdduk" title="PC 메인페이지 바로가기" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="mockup_m">
+                    <a href="https://wwkd623.github.io/project/RWD/yupdduk" title="모바일 메인페이지 바로가기" onclick="window.open(this.href, '_blank', 'width=428,height=926'); return false;">
+                        <div class="yupdduk_m"></div>
+                    </a>
+                </div>
+                <div class="point point1">
+                    <p>
+                        엽기떡볶이 공식 웹사이트를 반응형으로 클론 코딩한 프로젝트입니다.
+                        다양한 디바이스에서 동일한 사용자 경험을 제공하기 위해 반응형 웹 디자인을 적용했으며,
+                        시멘틱 태그를 활용해 웹표준과 접근성을 준수했습니다.
+                        실제 서비스 구조를 분석하고, 퍼블리싱 전 과정을 직접 구현했습니다.
+                    </p>
+                </div>
+                <div class="point point2">
+                    <p>
+                        jQuery를 사용해 메뉴바 애니메이션, 탭 전환, 스크롤 인터랙션을 구현하고,
+                        Slick Slider로 배너 슬라이드를 제작했습니다.
+                        또한 모바일 환경에서는 햄버거 버튼 클릭 시 사이드바 메뉴가
+                        자연스럽게 슬라이드되는 구조를 적용하여 사용자 편의성을 높였습니다.
+                        CSS Hover 효과를 통해 요소별 시각적 피드백도 세밀하게 구현했습니다.
+                    </p>
+                </div>
+                <div class="point point3">
+                    <p>
+                        Position과 Flex 레이아웃을 적절히 활용해 원본을 완성도 있게 구현하였고,
+                        반응형 환경에서도 균형 잡힌 레이아웃을 유지했습니다.
+                        HTML5, CSS3, jQuery, Slick.js로 제작되었으며,
+                        디자인 완성도와 동적 인터랙션 모두를 고려한 실무형 클론 코딩 프로젝트입니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="rwd2" class="works works_right sec">
+            <h2 class="sr-only">Work Section</h2>
+            <div class="mockup_img">
+                <img src="./images/mockup_yellowden.jpg" alt="옐로우든목업">
+            </div>
+            <div class="txtbox">
+                <h2><span>반응형 디자인</span><br>카페 옐로우든</h2>
+                <ul class="info">
+                    <li>작업기간</li>
+                    <li>4 days</li>
+                </ul>
+                <ul class="info info2">
+                    <li>작업영역</li>
+                    <li>
+                        PC - 메인페이지<br>
+                        M - 메인페이지, 사이드바
+                    </li>
+                </ul>
+                <ul class="info">
+                    <li>작업프로그램</li>
+                    <li>html5, css, javascript, jquery, swiper,<br>photoshop, figma</li>
+                </ul>
+            </div>
+        </section>
+        <section id="rwd2-1" class="worksrwd sec">
+            <h2 class="sr-only">Work Section</h2>
+            <div class="device_mockup">
+                <div class="mockup_pc">
+                    <img src="./images/imac.png" alt="pc디바이스목업">
+                    <div class="img_pc">
+                        <a href="https://wwkd623.github.io/project/RWD/yellowden" title="PC 메인페이지 바로가기" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="mockup_m">
+                    <a href="https://wwkd623.github.io/project/RWD/yellowden" title="모바일 메인페이지 바로가기" onclick="window.open(this.href, '_blank', 'width=428,height=926'); return false;">
+                        <div class="yellowden_m"></div>
+                    </a>
+                </div>
+                <div class="point point1">
+                    <p>
+                        실제 운영 중인 카페 ‘옐로우든(Yellowden)’의 메인 페이지를 개인 작업으로
+                        디자인부터 퍼블리싱까지 직접 구현한 프로젝트입니다.<br>
+                        PC, 노트북, 모바일 3가지 해상도에 대응하는 반응형 웹 디자인을 적용하여,
+                        기기별 최적화된 사용자 경험을 제공하도록 설계했습니다.
+                        전체 페이지 디자인은 Figma로 제작하고, 각 섹션의 배너 및 그래픽 요소는 Photoshop으로 직접 디자인했습니다.
+                    </p>
+                </div>
+                <div class="point point2">
+                    <p>
+                        jQuery를 활용해 메뉴 및 콘텐츠의 애니메이션 효과를 구현했으며,
+                        Swiper.js를 사용해 반응형 슬라이드를 구성했습니다.<br>
+                        또한 Hover 이벤트로 시각적 피드백을 강화하고,
+                        모바일 환경에서는 햄버거 버튼을 통한 사이드바 메뉴,
+                        상단 네비게이션바 및 하단 탭바를 직접 구현해 완성도를 높였습니다.
+                    </p>
+                </div>
+                <div class="point point3">
+                    <p>
+                        Figma와 Photoshop을 기반으로 시각적 일관성을 유지하면서도, UI/UX 중심의 구조 설계를 진행했습니다.
+                        HTML5, CSS3, jQuery, Swiper.js를 활용해 디자인과 인터랙션을 조화롭게 구현했으며,
+                        모든 레이아웃은 반응형 구조로 설계해 다양한 디바이스 환경에서 안정적인 화면 구성을 구현했습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pc1" class="works works_left sec">
+            <h2 class="sr-only">Work Section</h2>
+            <div class="mockup_img">
+                <img src="./images/mockup_snuh.jpg" alt="서울대학교병원">
+            </div>
+            <div class="txtbox">
+                <h2><span>웹 퍼블리싱(PC)</span><br>서울대학교병원</h2>
                 <ul class="info">
                     <li>작업기간</li>
                     <li>2 days</li>
                 </ul>
                 <ul class="info info2">
-                    <li>작업도구</li>
-                    <li>vs code, figma, photoshop</li>
+                    <li>작업영역</li>
+                    <li>
+                        메인페이지, 로그인페이지, 개별드롭다운 메뉴, 푸터 아코디언
+                    </li>
                 </ul>
                 <ul class="info">
                     <li>작업프로그램</li>
-                    <li>html5, css, javascript<br>jQuery, slick-slider</li>
+                    <li>html5, css, javascript, jquery, swiper</li>
                 </ul>
             </div>
         </section>
-        <section id="publish_m" class="works sec">
+        <section id="pc1-1" class="workspc sec">
+            <h2 class="sr-only">Work Section</h2>
+            <div class="device_mockup">
+                <div class="mockup_pc mockup_pc1">
+                    <img src="./images/imac.png" alt="pc디바이스목업">
+                    <div class="img_pc">
+                        <a href="https://wwkd623.github.io/project/PC/snuh" title="메인페이지 바로가기" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="mockup_pc mockup_pc2">
+                    <img src="./images/imac.png" alt="pc디바이스목업">
+                    <div class="img_pc">
+                        <a href="https://wwkd623.github.io/project/PC/snuh/login.html" title="로그인페이지 바로가기" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="point point1">
+                    <p>
+                        서울대학교병원 공식 사이트를 기반으로 PC 환경 메인페이지와 로그인페이지를 퍼블리싱한 프로젝트입니다.
+                        사이트 전반의 레이아웃과 인터랙션을 분석하고, 로고를 클릭시 메인/로그인 버튼을 클릭시 로그인페이지로 이동하는 등, 
+                        사용자 중심의 UI/UX를 고려하여 실제 서비스와 유사한 경험을 재현했습니다.
+                        유지보수와 웹 최적화를 위한 스프라이트 이미지를 활용하였습니다.
+                    </p>
+                </div>
+                <div class="point point2">
+                    <p>
+                        메인페이지에서는 헤더를 고정(Fixed)으로 설정하고, 스크롤 위치에 따라 상단 노출 여부가 자동으로 변화하도록 구현했습니다.
+                        Swiper.js를 사용해 메인 슬라이드와 카드뉴스형 알림판 슬라이드를 제작하고, 각각 재생/일시정지 버튼 기능을 적용했습니다.
+                        GNB는 3단 메뉴 구조로 제작했으며, 호버 시 2단·3단 메뉴가 부드럽게 트랜지션되도록 구현했습니다.
+                    </p>
+                </div>
+                <div class="point point3">
+                    <p>
+                        카카오맵 API를 활용해 서울대학교병원 지도를 삽입하고 확대·축소 기능을 적용했으며,
+                        푸터 영역에서는 버튼 클릭 시 리스트가 아래에서 위로 확장되는 애니메이션을 구현하고
+                        클로즈 버튼으로 닫을 수 있도록 구성했습니다.
+                    </p>
+                </div>
+                <div class="point point4">
+                    <p>
+                        로그인 페이지는 메인페이지와 동일한 해더 구조를 유지하며, 홈버튼과 예약확인 버튼 영역을 추가했습니다.
+                        로그인과 비회원 로그인을 각각 form, fieldset, legend, label등의 시멘틱 구성요소와,
+                        입력 필드에는 제한 속성, 비밀번호 속성 등 디테일을 적용하여 단순 시각적 구현이 아닌
+                        실무 수준의 정확성과 접근성을 높였습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pc2" class="works works_right sec">
             <h2 class="sr-only">Work Section</h2>
             <div class="mockup_img">
-                <img src="./images/mockup_subway.jpg" alt="써브웨이목업">
+                <img src="./images/mockup_pc_iptour.jpg" alt="인터파크투어">
             </div>
-            <!-- 텍스트박스 아래 깔아줄 그라디언트 그림자 -->
-            <div class="txtshadow"></div>
             <div class="txtbox">
-                <h2>웹 퍼블리싱(M) - 써브웨이</h2>
+                <h2><span>웹 퍼블리싱(PC)</span><br>인터파크투어</h2>
                 <ul class="info">
                     <li>작업기간</li>
                     <li>2 days</li>
                 </ul>
                 <ul class="info info2">
-                    <li>작업도구</li>
-                    <li>vs code, figma, photoshop</li>
+                    <li>작업영역</li>
+                    <li>
+                        메인페이지
+                    </li>
                 </ul>
                 <ul class="info">
                     <li>작업프로그램</li>
-                    <li>html5, css, javascript<br>jQuery, slick-slider</li>
+                    <li>html5, css, javascript, jquery, swiper</li>
                 </ul>
             </div>
         </section>
-        <section id="publish_pc" class="works sec">
+        <section id="pc2-1" class="workspc sec">
+            <h2 class="sr-only">Work Section</h2>
+            <div class="device_mockup">
+                <div class="mockup_pc">
+                    <img src="./images/imac.png" alt="pc디바이스목업">
+                    <div class="img_pc">
+                        <a href="https://wwkd623.github.io/project/PC/iptour" title="메인페이지 바로가기" target="_blank"></a>
+                    </div>
+                </div>
+
+                <div class="point point1">
+                    <p>
+                        HTML5, CSS3, jQuery, Swiper.js를 기반으로 레이아웃과 인터랙션을 조화롭게 구현했으며,
+                        동적인 UI 구성과 사용자 친화적 경험을 고려해 완성도를 높였습니다.
+                        각 섹션별 독립적인 기능 구현과 해더 변화 스크립트 적용을 통해 실무형 PC 웹 퍼블리싱 능력을 증명한 프로젝트입니다.
+                    </p>
+                </div>
+                <div class="point point2">
+                    <p>
+                        Swiper.js를 활용해 프리뷰가 연동된 메인 슬라이드를 구현하였고,
+                        동일 구조의 반복되는 카드 섹션은 각각 독립적으로 작동하도록 코드 설계했습니다.
+                        또한 스크롤 이벤트를 활용해 일정 이상 내려오면 간소화된 헤더로 변경되어 보이는
+                        애니메이션을 구현하여 화면 활용성을 높였습니다.
+                    </p>
+                </div>
+                <div class="point point3">
+                    <p>
+                        인터파크 투어 공식 사이트를 기반으로 PC 환경 메인 페이지를 퍼블리싱한 프로젝트입니다.
+                        페이지 레이아웃과 디자인을 분석하고, 실제 서비스와 유사한 구조와 인터랙션을 구현하여 사용자 경험을 재현했습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="m2" class="works works_left sec">
             <h2 class="sr-only">Work Section</h2>
             <div class="mockup_img">
-                <!-- <img src="" alt=""> -->
+                <img src="./images/subway-mockup.jpg" alt="써브웨이목업">
             </div>
-            <!-- 텍스트박스 아래 깔아줄 그라디언트 그림자 -->
-            <div class="txtshadow"></div>
             <div class="txtbox">
-                <h2>웹 퍼블리싱(PC) - 커핀그루나루</h2>
+                <h2><span>웹 퍼블리싱(M)</span><br>써브웨이</h2>
                 <ul class="info">
                     <li>작업기간</li>
-                    <li>2 days</li>
+                    <li>3 days</li>
                 </ul>
                 <ul class="info info2">
-                    <li>작업도구</li>
-                    <li>vs code, figma, photoshop</li>
+                    <li>작업영역</li>
+                    <li>
+                        메인페이지, 로그인페이지, 사이드바, 팝업창
+                    </li>
                 </ul>
                 <ul class="info">
                     <li>작업프로그램</li>
-                    <li>html5, css, javascript<br>jQuery, slick-slider</li>
+                    <li>html5, css, javascript, jquery, slick</li>
                 </ul>
             </div>
         </section>
-        <section id="publish_pc2" class="works sec">
+        <section id="m2-1" class="worksM sec">
             <h2 class="sr-only">Work Section</h2>
-            <div class="mockup_img">
-                <!-- <img src="" alt=""> -->
-            </div>
-            <!-- 텍스트박스 아래 깔아줄 그라디언트 그림자 -->
-            <div class="txtshadow"></div>
-            <div class="txtbox">
-                <h2>웹 퍼블리싱(PC) - 삼양식품</h2>
-                <ul class="info">
-                    <li>작업기간</li>
-                    <li>2 days</li>
-                </ul>
-                <ul class="info info2">
-                    <li>작업도구</li>
-                    <li>vs code, figma, photoshop</li>
-                </ul>
-                <ul class="info">
-                    <li>작업프로그램</li>
-                    <li>html5, css, javascript<br>jQuery, slick-slider</li>
-                </ul>
+            <div class="device_mockup">
+                <div class="mockup_m">
+                    <a href="https://wwkd623.github.io/project/moblie/subway/index.html" title="메인페이지 바로가기" onclick="window.open(this.href, '_blank', 'width=428,height=926'); return false;">
+                        <div class="subway_m"></div>
+                    </a>
+                </div>
+                <div class="mockup_m2">
+                    <div class="subway_menu"></div>
+                </div>
+                <div class="mockup_m3">
+                    <div class="subway_login">
+                        <a href="https://wwkd623.github.io/project/moblie/subway/login.html" title="로그인페이지 바로가기" onclick="window.open(this.href, '_blank', 'width=428,height=926'); return false;"></a>
+                    </div>
+                </div>
+                <div class="point point1">
+                    <p>
+                        jQuery와 Slick Slider를 활용해 슬라이드 및 인터랙션을 구현했으며,
+                        페이지 진입 시 자동으로 표시되는 팝업창을 추가해 브랜드 프로모션 효과를 표현했습니다.<br>
+                        또한 사이드바 메뉴와 아코디언 형태의 GNB(Global Navigation Bar) 를 직접 제작하여,
+                        메뉴 구조를 직관적으로 탐색할 수 있도록 구성했습니다.<br><br>
+                        또한 첫 화면에 팝업 배너를 구현하여 사용자가 ‘다시 보지 않기’ 버튼을 선택시 해당 설정이 로컬 스토리지(Local Storage) 에 저장되어,
+                        동일 디바이스에서 새로고침하거나 재방문하더라도 팝업이 다시 표시되지 않도록 구성했습니다.
+                    </p>
+                </div>
+                <div class="point point2">
+                    <p>
+                        써브웨이(SUBWAY) 공식 사이트를 기반으로 한 모바일 전용 웹 퍼블리싱 프로젝트로,
+                        메인 페이지와 로그인 페이지를 구현했습니다.<br>
+                        로고 및 홈·로그인 버튼에 링크 이동 기능을 적용하여
+                        실제 서비스와 유사한 사용자 흐름을 구현했으며,
+                        UI 구성과 동작 모두 모바일 환경에 최적화했습니다.
+                    </p>
+                </div>
+                <div class="point point3">
+                    <p>
+                        전체 화면 구성은 모바일 해상도 기준으로 제작되었으며,
+                        직관적인 네비게이션과 단순화된 인터페이스를 통해 사용자 접근성을 높였습니다.<br>
+                        HTML5, CSS3, jQuery, Slick.js를 중심으로 구현했으며,
+                        실제 서비스 수준의 완성도를 목표로 한 모바일 웹 퍼블리싱 실습 프로젝트입니다.
+                    </p>
+                </div>
             </div>
         </section>
-        <!-- <section id="frontend" class="works"></section> -->
-        <section id="webdesign" class="works sec">
+
+        <section id="m1" class="works works_right sec">
             <h2 class="sr-only">Work Section</h2>
             <div class="mockup_img">
-                <img src="./images/mockup_designbanner.jpg" alt="배너목업">
+                <img src="./images/mockup_hp.jpg" alt="해피포인트모바일">
             </div>
-            <!-- 텍스트박스 아래 깔아줄 그라디언트 그림자 -->
-            <div class="txtshadow"></div>
             <div class="txtbox">
-                <h2>웹 디자인 - 배너 및 팝업</h2>
+                <h2><span>웹 퍼블리싱(M)</span><br>해피포인트</h2>
                 <ul class="info">
                     <li>작업기간</li>
                     <li>1 days</li>
                 </ul>
                 <ul class="info info2">
-                    <li>작업도구</li>
-                    <li>photoshop</li>
+                    <li>작업영역</li>
+                    <li>
+                        메인페이지, 로그인페이지, 사이드바
+                    </li>
                 </ul>
                 <ul class="info">
                     <li>작업프로그램</li>
-                    <li>photoshop</li>
+                    <li>html5, css, javascript, jquery, swiper</li>
                 </ul>
             </div>
         </section>
-        <section id="webdesign2" class="works sec">
+        <section id="m1-1" class="worksM sec">
+            <h2 class="sr-only">Work Section</h2>
+            <div class="device_mockup">
+                <div class="mockup_m">
+                    <a href="https://wwkd623.github.io/project/moblie/happypoint/index.html" title="메인페이지 바로가기" onclick="window.open(this.href, '_blank', 'width=428,height=926'); return false;">
+                        <div class="hp_m"></div>
+                    </a>
+                </div>
+                <div class="mockup_m3">
+                    <div class="hp_m2"></div>
+                </div>
+                <div class="mockup_m2">
+                    <a href="https://wwkd623.github.io/project/moblie/happypoint/login.html" title="로그인페이지 바로가기" onclick="window.open(this.href, '_blank', 'width=428,height=926'); return false;">
+                        <div class="hp_login"></div>
+                    </a>
+                </div>
+                <div class="point point1">
+                    <p>
+                        메인 페이지에서는 Swiper.js를 이용해 메인 슬라이드 배너를 제작하고, 재생/일시정지 버튼을 구현하여 사용자 제어 기능을 강화했습니다.
+                        우측 하단에는 fixed된 챗봇 배너를 배치해 실무에서 자주 사용하는 레이아웃을 구현하였고 ,모바일 화면에서 시각적으로 방해되지 않도록 비율과 위치를 조정했습니다.<br><br>
+                        사이드 메뉴는 부드럽게 열리고 닫히는 애니메이션으로 구성했으며, 메뉴 오픈 시에는 배경 스크롤이 잠기도록 Scroll Lock 기능을 적용했습니다.
+                        이를 통해 사용자가 메뉴 상태에서 의도치 않게 화면이 움직이지 않도록 제어했습니다.
+                    </p>
+                </div>
+                <div class="point point2">
+                    <p>
+                        해피포인트 공식 모바일 웹사이트를 기반으로 메인 페이지, 사이드 메뉴, 로그인 페이지를 퍼블리싱한 프로젝트입니다.
+                        모바일 환경에 최적화된 구조 설계와 터치 기반 인터랙션을 중심으로 사용자의 편의성과 직관성을 높이는 데 집중했습니다.
+                        전체 페이지는 HTML5, CSS3, jQuery, Swiper.js를 활용해 구현했으며,
+                        주요 기능을 직접 제어하고 커스터마이징하여 실무 수준의 인터랙션을 구현했습니다.
+                    </p>
+                </div>
+                <div class="point point3">
+                    <p>
+                        전체 화면 구성은 모바일 해상도 기준으로 제작되었으며,
+                        직관적인 네비게이션과 단순화된 인터페이스를 통해 사용자 접근성을 높였습니다.<br>
+                        HTML5, CSS3, jQuery, Slick.js를 중심으로 구현했으며,
+                        실제 서비스 수준의 완성도를 목표로 한 모바일 웹 퍼블리싱 실습 프로젝트입니다.
+                    </p>
+                </div>
+                <div class="point point4">
+                    <p>
+                        로그인 페이지에서는 뒤로가기 버튼 동작 로직을 직접 제어하여,
+                        이전 페이지가 존재할 경우 history.back()으로 이동하고,
+                        이전 페이지가 없을 경우 자동으로 메인 페이지로 돌아가도록 예외 처리를 구현했습니다.
+                        또한 전체 로그인 폼은 시멘틱 마크업을 적용하여 접근성과 유지보수성을 높였습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="wd" class="works works_left sec">
             <h2 class="sr-only">Work Section</h2>
             <div class="mockup_img">
-                <img src="./images/mockup_detailpage.jpg" alt="상세페이지목업">
+                <a href="https://wwkd623.github.io/project/banner.pdf" title="작업물 보러가기" target="_blank">
+                    <img src="./images/wd_banner.jpg" alt="배너">
+                </a>
             </div>
-            <!-- 텍스트박스 아래 깔아줄 그라디언트 그림자 -->
-            <div class="txtshadow"></div>
             <div class="txtbox">
-                <h2>웹 디자인 - 상세페이지</h2>
+                <h2><span>웹 디자인</span><br>이벤트 및 팝업 배너</h2>
                 <ul class="info">
-                    <li>작업기간</li>
-                    <li>1 days</li>
+                    <li>작업기간 (개당)</li>
+                    <li>1-2 hours</li>
                 </ul>
                 <ul class="info info2">
-                    <li>작업도구</li>
-                    <li>photoshop</li>
+                    <li>실무 프로젝트</li>
+                    <li>
+                        기여도 100%
+                    </li>
                 </ul>
                 <ul class="info">
                     <li>작업프로그램</li>
@@ -339,15 +636,108 @@
                 </ul>
             </div>
         </section>
-        
+
+        <section id="wd2" class="works works_right sec">
+            <h2 class="sr-only">Work Section</h2>
+            <div class="mockup_img">
+                <a href="https://wwkd623.github.io/project/webpage.pdf" title="작업물 보러가기" target="_blank">
+                    <img src="./images/carfeinw_wd.jpg" alt="상세페이지">
+                </a>
+            </div>
+            <div class="txtbox">
+                <h2><span>웹 디자인</span><br>상세페이지</h2>
+                <ul class="info">
+                    <li>작업기간 (개당)</li>
+                    <li>2-3 hours</li>
+                </ul>
+                <ul class="info info2">
+                    <li>실무 프로젝트</li>
+                    <li>
+                        기여도 100%
+                    </li>
+                </ul>
+                <ul class="info">
+                    <li>작업프로그램</li>
+                    <li>photoshop</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="wd3" class="works works_left sec">
+            <h2 class="sr-only">Work Section</h2>
+            <div class="mockup_img">
+                <img src="./images/wd_ps.jpg" alt="보정">
+            </div>
+            <div class="txtbox">
+                <h2><span>웹 디자인</span><br>인물 보정</h2>
+                <ul class="info">
+                    <li>작업내용</li>
+                    <li>색감보정, 몸매보정, 얼굴보정,<br>이미지수평, 피부 톤/잡티, 옷 핏, 크롭</li>
+                </ul>
+                <ul class="info info2">
+                    <li>실무 프로젝트</li>
+                    <li>
+                        기여도 100%
+                    </li>
+                </ul>
+                <ul class="info">
+                    <li>작업프로그램</li>
+                    <li>photoshop</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="wd3-1" class="workswd3 sec">
+            <h2 class="sr-only">Work Section</h2>
+
+            <div class="swiper wdslider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/retouch13.jpg" alt="보정13"></div>
+                    <div class="swiper-slide"><img src="./images/retouch01.jpg" alt="보정1"></div>
+                    <div class="swiper-slide"><img src="./images/retouch12.jpg" alt="보정12"></div>
+                    <div class="swiper-slide"><img src="./images/retouch16.jpg" alt="보정16"></div>
+                    <div class="swiper-slide"><img src="./images/retouch02.jpg" alt="보정2"></div>
+                    <div class="swiper-slide"><img src="./images/retouch03.jpg" alt="보정3"></div>
+                    <div class="swiper-slide"><img src="./images/retouch04.jpg" alt="보정4"></div>
+                    <div class="swiper-slide"><img src="./images/retouch05.jpg" alt="보정5"></div>
+                    <div class="swiper-slide"><img src="./images/retouch06.jpg" alt="보정6"></div>
+                    <div class="swiper-slide"><img src="./images/retouch07.jpg" alt="보정7"></div>
+                    <div class="swiper-slide"><img src="./images/retouch08.jpg" alt="보정8"></div>
+                    <div class="swiper-slide"><img src="./images/retouch09.jpg" alt="보정9"></div>
+                    <div class="swiper-slide"><img src="./images/retouch10.jpg" alt="보정10"></div>
+                    <div class="swiper-slide"><img src="./images/retouch11.jpg" alt="보정11"></div>
+                    <div class="swiper-slide"><img src="./images/retouch14.jpg" alt="보정14"></div>
+                    <div class="swiper-slide"><img src="./images/retouch15.jpg" alt="보정15"></div>
+                    <div class="swiper-slide"><img src="./images/retouch17.jpg" alt="보정17"></div>
+                    <div class="swiper-slide"><img src="./images/retouch18.jpg" alt="보정18"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
     </div>
     <!-- 작업물영역 끝 -->
+
+    <section id="outro" class="sec">
+        <div class="tit">
+            <div class="contect_img">
+                <img src="./images/tit_Contect.png" alt="contect">
+            </div>
+            <ul class="field num">
+                <li>010-4712-6773</li>
+                <li>wwkd623@naver.com</li>
+            </ul>
+        </div>
+        <div class="thanks">
+            <img src="./images/Thanks.png" alt="thanks">
+        </div>
+    </section>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- gsap 애니메이션 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
