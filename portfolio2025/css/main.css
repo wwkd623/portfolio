@@ -9,7 +9,7 @@ body{
 li{list-style: none;}
 a{text-decoration: none; color: inherit;}
 button{background: none; border: none; cursor: pointer;}
-section{overflow: hidden; padding: 100px 140px;}
+section{overflow: hidden; padding: 100px 140px; min-width: 1800px;}
 .num{font-feature-settings: 'ss01' on;}
 .sr-only {
   position: absolute;
@@ -21,6 +21,32 @@ section{overflow: hidden; padding: 100px 140px;}
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+#toTop{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 100%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+#toTop:hover{
+    background: #000;
+}
+
+#toTop.show{
+    opacity: 1;
+    visibility: visible;
 }
 
 /* 표지영역 */
@@ -98,7 +124,7 @@ section{overflow: hidden; padding: 100px 140px;}
 }
 .profile_card{
     display: flex;
-    gap: 30px;
+    gap: 60px;
     align-items: center;
 }
 .profile_card .profile_img{
@@ -106,10 +132,16 @@ section{overflow: hidden; padding: 100px 140px;}
     height: 280px;
     background: #121212;
     border-radius: 100%;
+    overflow: hidden;
+}
+.profile_card .profile_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .profile_card .info .name{
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .profile_card .info .name h3{
     font-weight: 600;
@@ -118,10 +150,17 @@ section{overflow: hidden; padding: 100px 140px;}
 .profile_card .info .name p{
     font-weight: 300;
 }
+.profile_card .info .name p span{
+    font-size: 20px;
+    font-weight: 100;
+}
 .profile_card .info ul.etc li{
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 100;
     line-height: 36px;
+}
+.profile_card .info ul.etc li:nth-child(2){
+    margin: 10px 0;
 }
 .line_profile{
     width: 2px;
@@ -138,7 +177,6 @@ section{overflow: hidden; padding: 100px 140px;}
     font-weight: 500;
     margin-bottom: 20px;
 }
-
 .stat_wrap .experience ul.experience_list{
     display: flex;
     gap: 80px;
@@ -158,7 +196,7 @@ section{overflow: hidden; padding: 100px 140px;}
 }
 
 .stat_wrap .license{
-    width: 700px;
+    width: 500px;
 }
 .stat_wrap .license .license_list{
     width: 100%;
@@ -167,13 +205,13 @@ section{overflow: hidden; padding: 100px 140px;}
     justify-content: space-between;
 }
 .stat_wrap .license .license_list li{
-    width: 376px;
+    width: 260px;
     font-size: 24px;
     font-weight: 100;
     margin: 0 50px 20px 0;
 }
 .stat_wrap .license .license_list li:nth-child(2n){
-    width: 175px;
+    width: 180px;
     margin-right: 0;
 }
 
@@ -267,7 +305,7 @@ section{overflow: hidden; padding: 100px 140px;}
     transition: all 0.5s ease-in-out;
 }
 #index .gallery>div:hover>a>img{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 #index .gallery>div>a{
     display: block;
@@ -313,19 +351,19 @@ section{overflow: hidden; padding: 100px 140px;}
     left: 0;
     top: 0;
 }
-#index .gallery .wd{
+#index .gallery .publishM{
     height: 38%;
     position: absolute;
     left: 0;
     bottom: 0;
 }
-#index .gallery .frontend{
+#index .gallery .publishPC{
     height: 38%;
     position: absolute;
     right: 0;
     top: 0;
 }
-#index .gallery .publish{
+#index .gallery .wd{
     height: 60%;
     position: absolute;
     right: 0;
@@ -347,7 +385,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 1);
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     position: absolute;
     left: 0;
@@ -360,6 +398,10 @@ header.on{
     left: 0;
     top: 0;
 }
+header.hide {
+  display: none;
+}
+
 header ul.nav{
     display: flex;
     gap: 60px;
@@ -369,10 +411,10 @@ header ul.nav li:nth-child(1){
     width: 207px;
 }
 header ul.nav li:nth-child(2){
-    width: 170px;
+    width: 152px;
 }
 header ul.nav li:nth-child(3){
-    width: 247px;
+    width: 142px;
 }
 header ul.nav li:nth-child(4){
     width: 132px;
@@ -407,52 +449,696 @@ header ul.nav li:hover a{
     height: 100vh;
     position: relative;
 }
-.works .mockup_img{
-    width: 100%;
-    height: 100%;
+.works_left .mockup_img{
+    width: 60%;
+    height: 80%;
+    border-radius: 36px;
+    overflow: hidden;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.works_right .mockup_img{
+    width: 60%;
+    height: 80%;
+    border-radius: 36px;
+    overflow: hidden;
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .works .mockup_img img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+.works_left .txtbox{
+    position: absolute;
+    left: calc( 60% + 100px );
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 100px;
+}
+.works_right .txtbox{
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* padding: 0 100px; */
+}
+.works .txtbox h2{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 100px;
+}
+.works .txtbox h2 span{
+    font-weight: 300;
+}
+.works .txtbox ul.info{
+    padding-left: 20px;
+}
+.works .txtbox ul.info2{
+    margin: 40px 0;
+}
+.works .txtbox ul.info li{
+    font-size: 24px;
+    line-height: 1.5;
+}
+.works .txtbox ul.info li:first-child{
+    font-weight: 700;
+    position: relative;
+}
+.works .txtbox ul.info li:first-child::before{
+    content: "";
+    width: 4px;
+    height: 16px;
+    background: #c14f51;
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.works .txtbox ul.info li:last-child{
+    font-weight: 400;
+}
+#rwd1-1{
+    width: 100%;
+    height: 100vh;
+    background: #ce2d2d url("../images/bgimg_mainmid.png") no-repeat center center;
+    background-size: 106%;
+    position: relative;
+}
+.worksrwd .device_mockup{
+    width: 1100px;
+    height: 696px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.worksrwd .device_mockup .mockup_pc{
+    width: 732px;
+    height: 620px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.worksrwd .device_mockup .mockup_pc img{
+    width: 100%;
+    height: 100%;
+}
+.worksrwd .device_mockup .mockup_pc .img_pc{
+    width: 680px;
+    height: 410px;
+    position: absolute;
+    left: 25px;
+    top: 32px;
+    overflow: hidden;
+    background: #000;
+}
+/* 반응형 변경 PC */
+#rwd1-1 .device_mockup .mockup_pc .img_pc a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/yupdduk_pc.JPG") no-repeat;
+    background-size: 100%;
+    background-position: center 0;
+    transition: all 3s 0.2s;
+}
+#rwd1-1 .device_mockup .mockup_pc .img_pc a:hover{
+    background-position: center 100%;
+}
+
+.worksrwd .device_mockup .mockup_m{
+    width: 428px;
+    height: 696px;
+    position: absolute;
+    left: -54px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.worksrwd .device_mockup .mockup_m::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("../images/yupdduk_m_mockup.png") no-repeat;
+    background-size: cover;
     position: absolute;
     left: 0;
     top: 0;
-    object-fit: cover;
+    z-index: 10;
+    pointer-events: none;
 }
-.works .txtshadow{
+.worksrwd .device_mockup .mockup_m a{
+    display: block;
+    width: 288px;
+    height: 615px;
+    border-radius: 36px;
+    overflow: hidden;
+    position: absolute;
+    left: 70px;
+    top: 14px;
+}
+
+/* 반응형 변경 M */
+#rwd1-1 .device_mockup .mockup_m a .yupdduk_m{
     width: 100%;
-    height: 50%;
+    height: 100%;
+    background: #fff url("../images/yupdduk_m.JPG") no-repeat;
+    background-size: cover;
+    background-position: 0 28px;
+    transition: all 4s 0.2s;
     position: absolute;
     left: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    top: 0;
 }
-.works .txtbox{
+#rwd1-1 .device_mockup .mockup_m a:hover .yupdduk_m{
+    background-position: 0 100%;
+}
+
+.sec .device_mockup .point{
+    width: 300px;
+    padding: 30px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+}
+.sec .device_mockup .point p{
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+}
+
+.worksrwd .device_mockup .point1{
     position: absolute;
-    left: 140px;
-    bottom: 100px;
-    color: #000;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    left: -350px;
+    top: -40px;
 }
-.works .txtbox h2{
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 30px;
+.worksrwd .device_mockup .point2{
+    position: absolute;
+    left: -350px;
+    bottom: 50px;
 }
-.works .txtbox ul.info{
-    width: 420px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.worksrwd .device_mockup .point3{
+    position: absolute;
+    right: -350px;
+    top: 40%;
+    transform: translateY(-50%);
 }
-.works .txtbox ul.info2{
-    margin: 10px 0;
+
+/* 옐로우든 */
+#rwd2-1{
+    width: 100%;
+    height: 100vh;
+    background: #7b9b72 url("../images/bgimg_yellowden.png") no-repeat center center;
+    background-size: 106%;
+    position: relative;
 }
-.works .txtbox ul.info li{
-    font-size: 18px;
-    font-weight: 400;
+#rwd2-1 .device_mockup .mockup_m::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("../images/m_mockup.png");
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+/* 반응형 변경 PC */
+#rwd2-1 .device_mockup .mockup_pc .img_pc a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/yellowdenPC.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center 0;
+    transition: all 3s 0.2s;
+}
+#rwd2-1 .device_mockup .mockup_pc .img_pc a:hover{
+    background-position: center 100%;
+}
+/* 반응형 변경 M */
+#rwd2-1 .device_mockup .mockup_m a .yellowden_m{
+    width: 100%;
+    height: 100%;
+    background: #fff url("../images/yellowden.png") no-repeat;
+    background-size: cover;
+    background-position: 0 28px;
+    transition: all 5s 0.2s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#rwd2-1 .device_mockup .mockup_m a:hover .yellowden_m{
+    background-position: 0 100%;
+}
+
+
+/* PC */
+#pc1-1{
+    width: 100%;
+    height: 100vh;
+    background: #3864b8 url("../images/bgimg_snuh.png") no-repeat center center;
+    background-size: 100%;
+    position: relative;
+}
+#pc2-1{
+    width: 100%;
+    height: 100vh;
+    background: #203b89 url("../images/bgimg_iptour.png") no-repeat center center;
+    background-size: 100%;
+    position: relative;
+}
+
+.workspc .device_mockup{
+    width: 1100px;
+    height: 696px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#pc2-1 .device_mockup{
+    width: 900px;
+    height: 696px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.workspc .device_mockup .point1{
+    position: absolute;
+    right: -350px;
+    top: 5%;
+}
+
+#pc2-1 .device_mockup .point1{
+    position: absolute;
+    right: -350px;
+    top: 40%;
+}
+
+.workspc .device_mockup .point2{
+    position: absolute;
+    left: -350px;
+    top: 5%;
+}
+.workspc .device_mockup .point3{
+    position: absolute;
+    left: -350px;
+    bottom: 5%;
+}
+.workspc .device_mockup .point4{
+    position: absolute;
+    right: -350px;
+    top: 80%;
+    transform: translateY(-50%);
+}
+
+.workspc .device_mockup .mockup_pc1{
+    width: 530px;
+    height: 449px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.workspc .device_mockup .mockup_pc2{
+    width: 530px;
+    height: 449px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.workspc .device_mockup .mockup_pc img{
+    width: 100%;
+    height: 100%;
+}
+.workspc .device_mockup .mockup_pc .img_pc{
+    width: 493px;
+    height: 298px;
+    position: absolute;
+    left: 18px;
+    top: 23px;
+    overflow: hidden;
+    background: #000;
+}
+
+/* PC 서울대학교병원 */
+#pc1-1 .device_mockup .mockup_pc1 .img_pc a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/snuh_main.JPG") no-repeat;
+    background-size: 100%;
+    background-position: center 0;
+    transition: all 3s 0.2s;
+}
+#pc1-1 .device_mockup .mockup_pc2 .img_pc a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/snuh_login.JPG") no-repeat;
+    background-size: 100%;
+    background-position: center 0;
+    transition: all 0.7s 0.2s;
+}
+#pc1-1 .device_mockup .mockup_pc .img_pc a:hover{
+    background-position: center 100%;
+}
+
+/* PC 인터파크투어 */
+#pc2-1 .device_mockup .mockup_pc2{
+    width: 900px;
+    height: 762px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#pc2-1 .device_mockup .mockup_pc .img_pc{
+    width: 837px;
+    height: 506px;
+    position: absolute;
+    left: 31px;
+    top: 39px;
+    overflow: hidden;
+    background: #000;
+}
+
+#pc2-1 .device_mockup .mockup_pc .img_pc a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/iptour.JPG") no-repeat;
+    background-size: 100%;
+    background-position: center 0;
+    transition: all 5.6s 0.2s;
+}
+#pc2-1 .device_mockup .mockup_pc .img_pc a:hover{
+    background-position: center 100%;
+}
+
+
+
+#m1-1{
+    width: 100%;
+    height: 100vh;
+    background: #22246f url("../images/bgimg_hp.png") no-repeat center center;
+    background-size: 106%;
+    position: relative;
+}
+/* 모바일 써브웨이 */
+#m2-1{
+    width: 100%;
+    height: 100vh;
+    background: #009223 url("../images/subway_bg.png") no-repeat center center;
+    background-size: 106%;
+    position: relative;
+}
+.worksM .device_mockup{
+    width: 1100px;
+    height: 696px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.worksM .device_mockup .mockup_m{
+    width: 428px;
+    height: 696px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.worksM .device_mockup .mockup_m2{
+    width: 428px;
+    height: 696px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.worksM .device_mockup .mockup_m3{
+    width: 428px;
+    height: 696px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.worksM .device_mockup .mockup_m::after,
+.worksM .device_mockup .mockup_m2::after,
+.worksM .device_mockup .mockup_m3::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("../images/m_mockup.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+.worksM .device_mockup .mockup_m a{
+    display: block;
+    width: 288px;
+    height: 615px;
+    border-radius: 36px;
+    overflow: hidden;
+    position: absolute;
+    left: 70px;
+    top: 14px;
+}
+
+
+#m1-1 .device_mockup .mockup_m a .hp_m{
+    width: 100%;
+    height: 100%;
+    background: #fff url("../images/hp_main.JPG") no-repeat;
+    background-size: cover;
+    background-position: 0 28px;
+    transition: all 4s 0.2s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#m1-1 .device_mockup .mockup_m a:hover .hp_m{
+    background-position: 0 100%;
+}
+
+#m1-1 .device_mockup .mockup_m2 a{
+    display: block;
+    width: 288px;
+    height: 615px;
+    border-radius: 36px;
+    overflow: hidden;
+    position: absolute;
+    left: 70px;
+    top: 14px;
+}
+#m1-1 .device_mockup .mockup_m2 a .hp_login{
+    width: 100%;
+    height: 100%;
+    background: #fff url("../images/hp_login.JPG") no-repeat;
+    background-size: cover;
+    background-position: 0 28px;
+    transition: all 0.8s 0.2s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#m1-1 .device_mockup .mockup_m2 a:hover .hp_login{
+    background-position: 0 100%;
+}
+
+#m1-1 .device_mockup .mockup_m3 .hp_m2{
+    width: 288px;
+    height: 616px;
+    background: #fff url("../images/hp_side.JPG") no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 14px;
+    overflow: hidden;
+    border-radius: 32px;
+    transition: all 0.5s 0.2s;
+}
+#m1-1 .device_mockup .mockup_m3 .hp_m2:hover{
+    background-position: 0 100%;
+}
+
+#m2-1 .device_mockup .mockup_m a .subway_m{
+    width: 100%;
+    height: 100%;
+    background: #fff url("../images/subwayfull.JPG") no-repeat;
+    background-size: cover;
+    background-position: 0 28px;
+    transition: all 1s 0.2s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#m2-1 .device_mockup .mockup_m a:hover .subway_m{
+    background-position: 0 100%;
+}
+
+#m2-1 .device_mockup .mockup_m2 .subway_menu{
+    width: 288px;
+    height: 615px;
+    background: #fff url("../images/subway_menu.JPG") no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15px;
+    overflow: hidden;
+    border-radius: 32px;
+}
+#m2-1 .device_mockup .mockup_m3 .subway_login{
+    width: 288px;
+    height: 630px;
+    background: #fff url("../images/subway_login.JPG") no-repeat;
+    background-size: contain;
+    background-position: 0 45px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1px;
+    overflow: hidden;
+    border-radius: 40px;
+}
+#m2-1 .device_mockup .mockup_m3 .subway_login a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#m2-1 .device_mockup .point1{
+    position: absolute;
+    left: -280px;
+    bottom: 20px;
+}
+.worksM .device_mockup .point2{
+    position: absolute;
+    right: -280px;
+    top: -40px;
+}
+.worksM .device_mockup .point3{
+    position: absolute;
+    right: -280px;
+    top: 200px;
+}
+
+#m1-1 .device_mockup .point1{
+    position: absolute;
+    left: -280px;
+    top: 200px;
+}
+#m1-1 .device_mockup .point4{
+    position: absolute;
+    left: -280px;
+    bottom: 20px;
+}
+
+#wd3-1{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, #434343 0%, black 100%);
+    position: relative;
+}
+
+#wd3-1 .wdslider{
+    width: 1800px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: visible !important;
+}
+#wd3-1 .wdslider .swiper-wrapper .swiper-slide{
+    width: 1000px;
+    height: 667px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+#wd3-1 .wdslider .swiper-wrapper .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#wd3-1 .wdslider .swiper-pagination{
+    width: auto !important;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+}
+
+#wd3-1 .wdslider .swiper-pagination .swiper-pagination-bullet{
+    width: 14px;
+    height: 14px;
+    background: #eee;
+}
+#wd3-1 .wdslider .swiper-pagination .swiper-pagination-bullet-active{
+    width: 30px;
+    height: 14px;
+    border-radius: 999px;
+    background: #86b7d7;
+}
+
+#outro{
+    width: 100%;
+    height: 100vh;
+    background: #c14f51;
+    position: relative;
+}
+#outro .tit .contect_img{
+    width: 613px;
+    position: relative;
+    margin-bottom: 80px;
+
+}
+#outro .tit .contect_img::after{
+    content: "";
+    width: calc( 100% + 140px );
+    height: 1px;
+    background: #010101;
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+}
+#outro .tit ul.field{
+    width: 613px;
     text-align: right;
+}
+#outro .tit ul.field li{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+#outro .thanks{
+    position: absolute;
+    right: 140px;
+    bottom: 100px;
 }
